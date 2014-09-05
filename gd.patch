@@ -1,0 +1,207 @@
+diff --git a/GreenDroid/res/values-de/gd_strings.xml b/GreenDroid/res/values-de/gd_strings.xml
+deleted file mode 100644
+index 87e1f56..0000000
+--- a/GreenDroid/res/values-de/gd_strings.xml
++++ /dev/null
+@@ -1,50 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<!--
+-/*
+-** Copyright (C) 2010 Cyril Mottier (http://www.cyrilmottier.com)
+-**
+-** Licensed under the Apache License, Version 2.0 (the "License");
+-** you may not use this file except in compliance with the License.
+-** You may obtain a copy of the License at
+-**
+-**     http://www.apache.org/licenses/LICENSE-2.0
+-**
+-** Unless required by applicable law or agreed to in writing, software
+-** distributed under the License is distributed on an "AS IS" BASIS,
+-** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+-** See the License for the specific language governing permissions and
+-** limitations under the License.
+-*/
+--->
+-
+-<resources>
+-
+-	<string name="gd_go_home">Heim</string>
+-	<string name="gd_search">Suchen</string>
+-	<string name="gd_talk">Sprechen</string>
+-	<string name="gd_compose">Erstellen</string>
+-	<string name="gd_export">Export</string>
+-	<string name="gd_share">Teilen</string>
+-	<string name="gd_refresh">Neu laden</string>
+-	<string name="gd_take_photo">Foto aufnehmen</string>
+-	<string name="gd_pick_photo">Foto auswählen</string>
+-	<string name="gd_locate">Lokalisieren</string>
+-	<string name="gd_edit">Bearbeiten</string>
+-	<string name="gd_add">Hinzufügen</string>
+-	<string name="gd_star">Stern</string>
+-	<string name="gd_sort_by_size">Nach Größe ordnen</string>
+-	<string name="gd_locate_myself">Sich selbst lokalisieren</string>
+-	<string name="gd_compass">Kompass</string>
+-	<string name="gd_help">Hilfe</string>
+-	<string name="gd_info">Info</string>
+-	<string name="gd_settings">Einstellungen</string>
+-	<string name="gd_list">Auflisten</string>
+-	<string name="gd_trashcan">Löschen</string>
+-	<string name="gd_eye">Siehe</string>
+-	<string name="gd_all_friends">Alle Freunde</string>
+-	<string name="gd_group">Gruppe</string>
+-	<string name="gd_gallery">Galerie</string>
+-	<string name="gd_slideshow">Slideshow</string>
+-	<string name="gd_mail">E-Mail</string>
+-
+-</resources>
+diff --git a/GreenDroid/res/values-fr/gd_strings.xml b/GreenDroid/res/values-fr/gd_strings.xml
+deleted file mode 100644
+index d66c551..0000000
+--- a/GreenDroid/res/values-fr/gd_strings.xml
++++ /dev/null
+@@ -1,51 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<!--
+-/*
+-** Copyright (C) 2010 Cyril Mottier (http://www.cyrilmottier.com)
+-**
+-** Licensed under the Apache License, Version 2.0 (the "License");
+-** you may not use this file except in compliance with the License.
+-** You may obtain a copy of the License at
+-**
+-**     http://www.apache.org/licenses/LICENSE-2.0
+-**
+-** Unless required by applicable law or agreed to in writing, software
+-** distributed under the License is distributed on an "AS IS" BASIS,
+-** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+-** See the License for the specific language governing permissions and
+-** limitations under the License.
+-*/
+--->
+-
+-<resources>
+-	
+-	<string name="gd_go_home">Retourner à l\'accueil</string>
+-	<string name="gd_search">Rechercher</string>
+-	<string name="gd_talk">Discuter</string>
+-	<string name="gd_compose">Composer</string>
+-	<string name="gd_export">Exporter</string>
+-	<string name="gd_share">Partager</string>
+-	<string name="gd_refresh">Rafraichir</string>
+-	<string name="gd_take_photo">Prendre une photo</string>
+-	<string name="gd_pick_photo">Choisir une photo</string>
+-	<string name="gd_locate">Localiser</string>
+-	<string name="gd_edit">Éditer</string>
+-	<string name="gd_add">Ajouter</string>
+-	<string name="gd_star">Ajouter aux favoris</string>
+-	<string name="gd_sort_by_size">Trier par taille</string>
+-	<string name="gd_sort_alpha">Trier alphabétiquement</string>
+-	<string name="gd_locate_myself">Me localiser</string>
+-	<string name="gd_compass">Naviguer</string>
+-	<string name="gd_help">Aide</string>
+-	<string name="gd_info">Informations</string>
+-	<string name="gd_settings">Paramètres</string>
+-	<string name="gd_list">Lister</string>
+-	<string name="gd_trashcan">Supprimer</string>
+-	<string name="gd_eye">Voir</string>
+-	<string name="gd_all_friends">Tous les amis</string>
+-	<string name="gd_group">Groupes</string>
+-	<string name="gd_gallery">Galerie</string>
+-	<string name="gd_slideshow">Diaporama</string>
+-	<string name="gd_mail">Courriel</string>
+-	
+-</resources>
+diff --git a/GreenDroid/res/values-tr/gd_strings.xml b/GreenDroid/res/values-tr/gd_strings.xml
+deleted file mode 100644
+index bc90042..0000000
+--- a/GreenDroid/res/values-tr/gd_strings.xml
++++ /dev/null
+@@ -1,50 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<!--
+-/*
+-** Copyright (C) 2010 Cyril Mottier (http://www.cyrilmottier.com)
+-**
+-** Licensed under the Apache License, Version 2.0 (the "License");
+-** you may not use this file except in compliance with the License.
+-** You may obtain a copy of the License at
+-**
+-**     http://www.apache.org/licenses/LICENSE-2.0
+-**
+-** Unless required by applicable law or agreed to in writing, software
+-** distributed under the License is distributed on an "AS IS" BASIS,
+-** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+-** See the License for the specific language governing permissions and
+-** limitations under the License.
+-*/
+--->
+-
+-<resources>
+-
+-	<string name="gd_go_home">Ana Sayfa</string>
+-	<string name="gd_search">Ara</string>
+-	<string name="gd_talk">Konuş</string>
+-	<string name="gd_compose">Yeni</string>
+-	<string name="gd_export">Dışarı Aktar</string>
+-	<string name="gd_share">Paylaş</string>
+-	<string name="gd_refresh">Yenile</string>
+-	<string name="gd_take_photo">Fotoğraf Makinasından</string>
+-	<string name="gd_pick_photo">Galeriden</string>
+-	<string name="gd_locate">Yerini belirle</string>
+-	<string name="gd_edit">Düzenle</string>
+-	<string name="gd_add">Ekle</string>
+-	<string name="gd_star">Yıldız</string>
+-	<string name="gd_sort_by_size">Boyuta göre sırala</string>
+-	<string name="gd_locate_myself">Konumumu bul</string>
+-	<string name="gd_compass">Pusula</string>
+-	<string name="gd_help">Yardım</string>
+-	<string name="gd_info">Bilgi</string>
+-	<string name="gd_settings">Ayarlar</string>
+-	<string name="gd_list">Liste</string>
+-	<string name="gd_trashcan">Sil</string>
+-	<string name="gd_eye">Bak</string>
+-	<string name="gd_all_friends">Tüm arkadaşlar</string>
+-	<string name="gd_group">Grup</string>
+-	<string name="gd_gallery">Galeri</string>
+-	<string name="gd_slideshow">Slide gösterisi</string>
+-	<string name="gd_mail">Posta</string>
+-
+-</resources>
+diff --git a/GreenDroid/res/values/gd_styles.xml b/GreenDroid/res/values/gd_styles.xml
+index 8858bfe..197a754 100644
+--- a/GreenDroid/res/values/gd_styles.xml
++++ b/GreenDroid/res/values/gd_styles.xml
+@@ -20,7 +20,7 @@
+ <resources>
+ 
+ 	<style name="TextAppearance">
+-		<item name="android:textColor">?android:attr/textColorPrimary</item>
++		<item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+ 		<item name="android:textColorHighlight">#FFFF9200</item>
+ 		<item name="android:textColorHint">?android:attr/textColorHint</item>
+ 		<item name="android:textColorLink">#5C5CFF</item>
+diff --git a/GreenDroid/src/greendroid/widget/ActionBar.java b/GreenDroid/src/greendroid/widget/ActionBar.java
+index 8762687..48cace7 100644
+--- a/GreenDroid/src/greendroid/widget/ActionBar.java
++++ b/GreenDroid/src/greendroid/widget/ActionBar.java
+@@ -276,7 +276,7 @@ public class ActionBar extends LinearLayout {
+ 
+             item.setItemId(itemId);
+ 
+-            if (mDividerDrawable != null) {
++            if (mDividerDrawable != null && !(item instanceof LoaderActionBarItem)) {
+                 ImageView divider = new ImageView(getContext());
+                 int dividerWidth = (mDividerWidth > 0) ? mDividerWidth : mDividerDrawable.getIntrinsicWidth();
+                 final LinearLayout.LayoutParams lp = new LayoutParams(dividerWidth, LayoutParams.FILL_PARENT);
+diff --git a/GreenDroid/src/greendroid/widget/PagedView.java b/GreenDroid/src/greendroid/widget/PagedView.java
+index ada6b09..0f2fb15 100644
+--- a/GreenDroid/src/greendroid/widget/PagedView.java
++++ b/GreenDroid/src/greendroid/widget/PagedView.java
+@@ -644,7 +644,6 @@ public class PagedView extends ViewGroup {
+     };
+ 
+     private Runnable mScrollerRunnable = new Runnable() {
+-        @Override
+         public void run() {
+             final Scroller scroller = mScroller;
+             if (!scroller.isFinished()) {

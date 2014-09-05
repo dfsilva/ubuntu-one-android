@@ -1,0 +1,30 @@
+=== modified file 'res/xml/preferences.xml'
+--- res/xml/preferences.xml	2012-08-16 10:52:08 +0000
++++ res/xml/preferences.xml	2012-08-21 21:54:47 +0000
+@@ -23,10 +23,6 @@
+ 		    android:title="@string/preferences_activity.invite_friend_title"
+ 		    android:summary="@string/preferences_activity.invite_friend_summary" />
+ 		<Preference
+-			android:key="purchase_storage"
+-			android:title="@string/preferences_activity.purchase_storage_title"
+-			android:summary="@string/preferences_activity.purchase_storage_summary" />
+-		<Preference
+ 			android:key="upgrade_plan"
+ 			android:title="@string/preferences_activity.upgrade_plan_title"
+ 			android:summary="@string/preferences_activity.upgrade_plan_summary" />
+
+=== modified file 'src/com/ubuntuone/android/files/activity/PreferencesActivity.java'
+--- src/com/ubuntuone/android/files/activity/PreferencesActivity.java	2012-08-16 14:27:30 +0000
++++ src/com/ubuntuone/android/files/activity/PreferencesActivity.java	2012-08-21 21:55:03 +0000
+@@ -187,8 +187,8 @@
+ 		
+ 		setupOnClickPreference(Pref.INVITE_FRIEND, this);
+ 		
+-		final Preference purchaseStorage = findPreference(Pref.PURCHASE_STORAGE);
+-		purchaseStorage.setOnPreferenceClickListener(mPurchaseStorageListener);
++		//final Preference purchaseStorage = findPreference(Pref.PURCHASE_STORAGE);
++		//purchaseStorage.setOnPreferenceClickListener(mPurchaseStorageListener);
+ 		
+ 		final Preference upgradePlan = findPreference(Pref.UPGRADE_PLAN);
+ 		upgradePlan.setOnPreferenceClickListener(mLinkListener);
+

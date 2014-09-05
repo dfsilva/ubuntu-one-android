@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ubuntuone-android-files" default="help">
+
+    <description>
+    *** Ubuntu One Files for Android ***
+
+    Ubuntu One cloud storage client for Android
+    
+    http://one.ubuntu.com
+    http://one.ubuntu.com/developer
+    http://launchpad.net/ubuntuone-android-files
+
+    Make sure you have Android SDK and git installed!
+
+    IRC: #ubuntuone @ irc.freenode.net
+    </description>
+
+    <!-- Check if android and git are present. -->
+    <exec executable="./tools.sh" failonerror="true">
+    </exec>
+
+    <!-- The project.properties file is created and updated by the 'android'
+         tool, as well as ADT.
+
+         This contains project specific properties such as project target, and library
+         dependencies. Lower level build properties are stored in ant.properties
+         (or in .classpath for Eclipse projects).
+
+         This file is an integral part of the build system for your
+         application and should be checked into Version Control Systems. -->
+    <loadproperties srcFile="project.properties" />
+
+    <exec executable="android">
+        <arg value="update" />
+        <arg value="project" />
+        <arg value="-p" />
+        <arg value="." />
+        <arg value="-t" />
+        <arg value="${target}" />
+    <!-- Watch out: using name argument will ignore the custom build.xml version-tag! -->
+    </exec>
+
+    <!-- The local.properties file is created and updated by the 'android' tool.
+         It contains the path to the SDK. It should *NOT* be checked into
+         Version Control Systems. -->
+    <loadproperties srcFile="local.properties" />
+
+    <!-- quick check on sdk.dir -->
+    <fail message="sdk.dir is missing. Make sure to generate local.properties using 'android update project'"
+            unless="sdk.dir" />
+
+    <!-- The ant.properties file can be created by you. It is only edited by the
+         'android' tool to add properties to it.
+         This is the place to change some Ant specific build properties.
+         Here are some properties you may want to change/update:
+
+         source.dir
+             The name of the source directory. Default is 'src'.
+         out.dir
+             The name of the output directory. Default is 'bin'.
+
+         For other overridable properties, look at the beginning of the rules
+         files in the SDK, at tools/ant/build.xml
+
+         Properties related to the SDK location or the project target should
+         be updated using the 'android' tool with the 'update' action.
+
+         This file is an integral part of the build system for your
+         application and should be checked into Version Control Systems.
+
+    -->
+    <property file="ant.properties" />
+
+    <property name="libs" value="./libs" />
+
+    <target name="clean-libs">
+        <delete dir="${libs}" quiet="true" />
+        <delete dir="library" quiet="true" />
+    </target>
+
+    <target name="get-libs">
+        <!-- TODO add gpg verification to lp downloads http://ant.apache.org/manual/Tasks/get.html -->
+        <!-- TODO add 'nearby_copy' before downloading stuff -->
+        <mkdir dir="${libs}" />
+
+        <!-- Android support library -->
+        <copy file="${lib.android-support.path}" todir="${libs}" />
+
+        <!-- Google Analytics -->
+        <get src="${lib.google-analytics.url}" dest="${libs}"
+            verbose="on" usetimestamp="true" maxtime="60" />
+        <unzip src="${libs}/${lib.google-analytics.zip}" dest="${libs}">
+            <patternset>
+                <include name="**/${lib.google-analytics.jar}" />
+            </patternset>
+            <mapper type="flatten"/>
+        </unzip>
+        <delete file="${libs}/${lib.google-analytics.zip}" quiet="true" />
+
+        <!-- SignPost Core -->
+        <get src="${lib.signpost-core.url}" dest="${libs}"
+            verbose="on" usetimestamp="true" maxtime="60" />
+
+        <!-- SignPost CommonsHttp4 -->
+        <get src="${lib.signpost-commonshttp4.url}" dest="${libs}"
+            verbose="on" usetimestamp="true" maxtime="60" />
+
+        <!-- Jackson -->
+        <get src="${lib.jackson-mini.url}" dest="${libs}"
+            verbose="on" usetimestamp="true" maxtime="60" />
+
+        <!-- Ubuntu SSO Java library -->
+        <get src="${lib.ubuntu-sso-java-library.url}" dest="${libs}"
+            verbose="on" usetimestamp="true" maxtime="60" />
+
+        <!-- Ubuntu One Files Java Library (new) -->
+        <get src="${lib.ubuntuone-files-java-library.url}" dest="${libs}"
+            verbose="on" usetimestamp="true" maxtime="60" />
+        </target>
+    
+        <!-- Check if GreenDroid library is present. -->
+        <available property="greendroid.src.present" file="${lib.greendroid.src}" type="dir" />
+
+        <!-- Download and patch GreenDroid. -->
+        <target name="get-greendroid" unless="${greendroid.src.present}">
+        <echo message="Getting GreenDroid from github..." />
+        <exec executable="git">
+            <arg value="clone" />
+            <arg value="${lib.greendroid.git}" />
+            <arg value="library/GreenDroid" />
+        </exec>
+        <echo message="Patching GreenDroid for Ubuntu One Files..." />
+        <patch
+            patchfile="gd.patch"
+            strip="2"
+            quiet="true"
+            dir="${lib.greendroid.src}"
+            failonerror="true" />
+        <echo message="Updating GreenDroid lib-project..." />
+        <exec executable="android" dir="${lib.greendroid.src}">
+            <arg value="update" />
+            <arg value="lib-project" />
+            <arg value="-p" />
+            <arg value="." />
+            <arg value="-t" />
+            <arg value="${target}" />
+        </exec>
+    </target>
+
+    <target name="setup" depends="get-libs, get-greendroid"
+        description="Download project dependencies.">
+        <echo message="Downloaded all project dependencies." />
+    </target>
+
+    <property name="analytics-path" value="src/com/ubuntuone/android/files/Analytics.java" />
+
+    <target name="google">
+        <replace file="${analytics-path}" token=".NONE" value=".GOOGLE" failOnNoReplacements="true" />
+    </target>
+
+    <target name="vodafone">
+        <exec executable="patch" input="${vodafone.patch}">
+        <arg value="-p0" />
+    </exec>
+        <replace file="${analytics-path}" token=".NONE" value=".VODAFONE" failOnNoReplacements="true" />
+    </target>
+
+    <target name="amazon">
+        <replace file="${analytics-path}" token=".NONE" value=".AMAZON" failOnNoReplacements="true" />
+    </target>
+
+<!-- extension targets. Uncomment the ones where you want to do custom work
+     in between standard targets -->
+<!--
+    <target name="-pre-build">
+    </target>
+    <target name="-pre-compile">
+    </target>
+
+    /* This is typically used for code obfuscation.
+       Compiled code location: ${out.classes.absolute.dir}
+       If this is not done in place, override ${out.dex.input.absolute.dir} */
+    <target name="-post-compile">
+    </target>
+-->
+
+    <!-- Import the actual build file.
+
+         To customize existing targets, there are two options:
+         - Customize only one target:
+             - copy/paste the target into this file, *before* the
+               <import> task.
+             - customize it to your needs.
+         - Customize the whole content of build.xml
+             - copy/paste the content of the rules files (minus the top node)
+               into this file, replacing the <import> task.
+             - customize to your needs.
+
+         ***********************
+         ****** IMPORTANT ******
+         ***********************
+         In all cases you must update the value of version-tag below to read 'custom' instead of an integer,
+         in order to avoid having your file be overridden by tools such as "android update project"
+    -->
+    <!-- version-tag: custom -->
+    <import file="${sdk.dir}/tools/ant/build.xml" />
+
+</project>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:title="@string/storage_management_title">
+	
+	<PreferenceCategory
+		android:title="@string/device_storage_info_header" >
+		
+		<Preference
+			android:key="storage_available"
+			android:title="@string/storage_available_title"
+			android:selectable="false" />
+			
+		<Preference
+			android:key="storage_used"
+			android:title="@string/storage_used_title"
+			android:selectable="false" />
+			
+	</PreferenceCategory>
+	
+	<PreferenceCategory
+		android:title="@string/files_info_header" >
+		
+		<Preference
+			android:key="files_in_cloud"
+			android:title="@string/files_in_cloud_title"
+			android:selectable="false" />
+			
+		<Preference
+			android:key="synced_files"
+			android:title="@string/synced_files_title"
+			android:selectable="false" />
+			
+		<Preference
+			android:key="cached_files"
+			android:title="@string/cached_files_title"
+			android:selectable="false" />
+	
+	</PreferenceCategory>
+	
+	<PreferenceCategory
+		android:title="@string/manage_storage_header" >
+		
+		<Preference
+			android:key="refresh_stats"
+			android:title="@string/refresh_stats_title"
+			android:summary="@string/refresh_stats_summary" />
+		
+		<Preference
+			android:key="check_missing"
+			android:title="@string/check_missing_files_title"
+			android:summary="@string/check_missing_files_summary" />
+		
+		<Preference
+			android:key="remove_cached"
+			android:title="@string/remove_cached_files_title"
+			android:summary="@string/remove_cached_files_summary" />
+			
+		<Preference
+			android:key="limit_storage"
+			android:title="@string/limit_storage_title"
+			android:summary="@string/limit_storage_summary" />
+			
+		<Preference
+			android:key="unselect_synced"
+			android:title="@string/unselect_synced_title"
+			android:summary="@string/unselect_synced_summary"
+			android:enabled="false" />
+		
+	</PreferenceCategory>
+	
+</PreferenceScreen>

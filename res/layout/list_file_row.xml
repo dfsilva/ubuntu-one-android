@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="?android:attr/listPreferredItemHeight"
+	android:minHeight="?android:attr/listPreferredItemHeight"
+	android:padding="@dimen/view_margin">
+	
+	<ImageView
+		android:id="@id/icon"
+		
+		android:layout_width="48dp"
+		android:maxWidth="48dp"
+		android:layout_height="fill_parent"
+		android:layout_marginRight="@dimen/view_margin"
+		android:layout_centerVertical="true"
+		android:scaleType="centerInside"
+		android:paddingLeft="@dimen/view_margin"
+		
+		android:src="@drawable/file" />
+	
+	<TextView
+		android:id="@id/size"
+		
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		
+		android:layout_alignParentRight="true"
+		android:layout_alignParentBottom="true"
+		android:layout_marginLeft="@dimen/view_margin"
+		android:layout_marginTop="@dimen/view_margin"
+		android:paddingRight="@dimen/view_margin"
+		android:gravity="right"
+		
+		android:singleLine="true"
+		android:textSize="15dip"
+		android:textColor="@color/text_grey" />
+	
+	<TextView
+		android:id="@id/detail"
+		
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		
+		android:layout_toRightOf="@id/icon"
+		android:layout_toLeftOf="@id/size"
+		android:layout_alignParentBottom="true"
+		android:layout_marginLeft="@dimen/view_margin"
+		android:layout_marginTop="@dimen/view_margin"
+		
+		android:singleLine="true"
+		android:ellipsize="marquee"
+		android:textSize="15dip"
+		android:textColor="@color/text_grey" />
+		
+	<TextView
+		android:id="@id/title"
+		
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/icon"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentRight="true"
+		android:paddingRight="@dimen/view_margin"
+		android:layout_above="@id/detail"
+		android:layout_alignWithParentIfMissing="true"
+		android:layout_marginLeft="@dimen/view_margin"
+		android:gravity="center_vertical"
+		
+		android:singleLine="true"
+		android:ellipsize="middle"
+		android:textSize="17dip"
+		android:textColor="@color/text_red" />
+		
+</RelativeLayout>

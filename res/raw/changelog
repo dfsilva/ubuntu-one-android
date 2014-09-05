@@ -1,0 +1,129 @@
+<small>
+Recent changes:
+<b>1.2.8</b>
+ Maintenance update
+- Notify when reauthentication needed.
+- Fix auto-upload roaming notification.
+- Removed the app widget/shortcut.
+
+<b>Feedback channels:</b>
+&rarr; Menu > Settings > Send feedback
+&rarr; e-mail: ubuntuone-support@canonical.com
+&rarr; irc: #ubuntuone at irc.freenode.net
+&rarr; report bugs at https://bugs.launchpad.net/ubuntuone-android-files
+&rarr; hop on http://askubuntu.com
+
+<b>1.2.7</b>
+- Fixed auto-uploads hanging.
+- Fully utilize Wi-Fi for uploads, even when screen is off.
+
+<b>1.2.6</b>
+- Proxy support on 3.0+
+- Reorganized app preferences.
+- Fixed 'Could not find node' toast.
+- Fixed sign up crasher.
+- Server side issue affecting operation of the app resolved.
+
+<b>1.2.5</b>
+- Share multiple files at once to Ubuntu One.
+- Better quality thumbnails.
+- Fixed directory download.
+- Fixed Turkish locale.
+- Fixed sign in crashes.
+- WiMAX connection treated as unmetered.
+- App should no longer sign you out. If you can't sign in, please make sure your <i>time zone</i> and <i>date & time</i> are correct. It is best to set them to Automatic.
+
+<b>1.2.4</b>
+- Updated settings screen. Invite friends and get more free cloud storage!
+- Fixed breaking file public links when folder is re-selected for auto-upload.
+- Minor UI tweaks.
+
+<b>1.2.3</b>
+- Maintenance update.
+- Memory use improvements.
+
+<b>1.2.2</b>
+- Maintenance update.
+- API volume request bugfix.
+
+<b>1.2.1</b>
+- Maintenance update.
+- Locale related bugfix.
+
+<b>1.2.0</b>
+- Faster browsing and refreshing
+- Better sharing (single or multiple) files with U1
+- Bug fixes
+
+<b>1.1.4</b>
+- Fixed bug affecting Samsung S series and Motorola Droid devices with vendor specific external storage.
+- Lower upload worker priority.
+
+<b>1.1.3</b>
+- Improved default choice of Auto Uploaded galleries
+- Added notification when quota exceeded
+- Fixed crasher on Android 2.1
+- Other fixes - thank you all for feedback!
+
+<b>1.1.2</b>
+- Fixed reported crasher
+
+<b>1.1.0</b>
+- Easily share links to files
+- Rock solid Auto Upload
+- Choose galleries to Auto Upload
+- New 'only when charging' setting
+- New 'also when roaming' setting
+- More reliable 'only on wifi' setting
+- Canceling all uploads from settings
+- Canceling file downloads from context menu
+- Minor UI tweaks
+
+<b>1.0.5.3</b>
+- Fixed sign in screen crash.
+
+<b>1.0.5.2</b>
+- Maintenance update.
+
+<b>1.0.5.1</b>
+- Fixed 4G connection detection 
+
+<b>1.0.5</b>
+- In-app Ubuntu One sign up
+- Added introduction to U1
+- Minor UI improvements, styling
+- Allow use on devices with no touch screen
+- Minor bug fixes
+
+<b>1.0.4</b>
+- Fix auto-upload on devices with lowercase DCIM photo path
+- Fixed overloading system bar with notifications
+- Honeycomb notifications styling
+- Allow 3rd party apps to request access to U1
+- Be smarter when OAuth token invalidated
+
+<b>1.0.3</b>
+- Log in via Ubuntu Single Sign On & store OAuth token in Account Manager
+- Fix OAuth time drift issue that caused failed login
+- Allow uploading and downloading files at the same time
+- Add better notifications of transfer progress and completed/failed transfers
+- Add option to allow photo upload on demand (useful with periodic sync)
+- Fixed periodic sync (properly shutdown instant upload service)
+- Fixed checking for pictures cloud folder, even when not uploading
+- Don't refresh file list on back button press
+- Don't allow auto-transfers overwrite files
+- Add option to send logs to developers
+- Use Google Analytics to collect anonymous app usage data
+
+<b>1.0.2</b>
+- Auto-upload content from under /sdcard/DCIM only
+- Fixed two crash-reported issues
+
+<b>1.0.1</b>
+- Fixed crash on Resume (deprecated call on HC)
+- Fixed Honeycomb managed cursor issue
+- Fixed MIME type for upper case extentions
+
+<b>1.0</b>
+- Initial release
+</small>

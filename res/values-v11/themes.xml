@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="TextAppearance.StatusBar">
+		<item name="android:textSize">@dimen/text_size_small</item>
+	</style>
+
+	<style name="TextAppearance.StatusBar.NotificationTitle">
+		<item name="android:textColor">@android:color/primary_text_dark</item>
+	</style>
+	
+	<style name="TextAppearance.StatusBar.NotificationSubtitle">
+		<item name="android:textColor">#ff6b6b6b</item>
+	</style>
+</resources>

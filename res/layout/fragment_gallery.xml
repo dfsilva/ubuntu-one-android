@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:u1f="http://schemas.android.com/apk/res/com.ubuntuone.android.files"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black" >
+
+    <com.ubuntuone.android.files.view.GalleryViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+    
+    <LinearLayout
+        android:id="@+id/details_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible" >
+
+        <com.ubuntuone.android.files.widget.TextViewPlus
+            android:id="@+id/image_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:gravity="top|center_horizontal"
+            android:textColor="@android:color/primary_text_dark"
+            android:textSize="@dimen/text_size_medium"
+            u1f:customFont="Ubuntu-B.ttf" />
+        
+        <ImageView
+            android:id="@+id/share_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_menu_share" />
+    </LinearLayout>
+
+</FrameLayout>

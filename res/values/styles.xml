@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<style name="Header">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:minHeight">60sp</item>
+		<item name="android:background">@android:color/darker_gray</item>
+	</style>
+	
+	<style name="HeaderIcon">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">fill_parent</item>
+		<item name="android:padding">3sp</item>
+	</style>
+	
+	<style name="HeaderText">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">fill_parent</item>
+		<item name="android:gravity">center_vertical</item>
+		<item name="android:textColor">@android:color/white</item>
+		<item name="android:textSize">18sp</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	
+	<style name="Footer">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:minHeight">52sp</item>
+		<item name="android:background">@android:color/darker_gray</item>
+	</style>
+	
+	<style name="FooterButton">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:padding">3sp</item>
+	</style>
+    
+</resources>

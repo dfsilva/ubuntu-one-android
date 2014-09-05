@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	package="com.ubuntuone.android.files"
+	android:installLocation="internalOnly"
+	android:versionName="1.2.8"
+	android:versionCode="472">
+	
+	<uses-sdk
+		android:minSdkVersion="7"
+		android:targetSdkVersion="8" />
+	
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
+	<uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+	<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+	<uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+	<uses-permission android:name="android.permission.INTERNET" />
+
+	<uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+	
+	<!-- FOR DEBUG BUILDS ONLY!!! -->
+	<!-- <uses-permission android:name="android.permission.READ_LOGS"></uses-permission> -->
+	
+	<application
+		android:name="UbuntuOneFiles"
+		android:icon="@drawable/launcher"
+		android:label="@string/app_name"
+		android:theme="@style/Theme.U1F.WindowNoTitle" >
+		
+		<receiver
+			android:name=".receiver.SystemReceiver" tools:ignore="ExportedReceiver">
+		
+			<intent-filter>
+				<!-- Not received if the app is installed on SD card! -->
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+			</intent-filter>
+			
+			<intent-filter>
+				<action android:name="android.intent.action.MEDIA_MOUNTED" />
+				<action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+				<data android:scheme="file" /> 
+			</intent-filter>
+		</receiver>
+		
+		<service
+			android:name=".service.MetaService"
+			android:exported="false"
+			android:label="MetaService" >
+			
+			<intent-filter>
+				<action android:name="com.ubuntuone.android.files.ACTION_GET_USER" />
+				<action android:name="com.ubuntuone.android.files.ACTION_GET_VOLUME" />
+				<action android:name="com.ubuntuone.android.files.ACTION_CREATE_VOLUME" />
+				
+				<action android:name="com.ubuntuone.android.files.ACTION_MAKE_DIRECTORY" />
+				<action android:name="com.ubuntuone.android.files.ACTION_GET_NODE" />
+				<action android:name="com.ubuntuone.android.files.ACTION_UPDATE_NODE" />
+				<action android:name="com.ubuntuone.android.files.ACTION_DELETE_NODE" />
+				
+				<action android:name="com.ubuntuone.android.files.ACTION_UPLOAD_MEDIA" />
+				<action android:name="com.ubuntuone.android.files.ACTION_RETRY_FAILED" />
+				<action android:name="com.ubuntuone.android.files.ACTION_CREATE_PHOTO_UDF" />
+			</intent-filter>
+		</service>
+		
+		<service
+			android:name=".service.UpDownService"
+			android:exported="false"
+			android:label="UpDownService" >
+			
+			<intent-filter>
+				<action android:name="com.ubuntuone.android.files.updown.ACTION_DOWNLOAD" />
+				<action android:name="com.ubuntuone.android.files.updown.ACTION_UPLOAD" />
+				<action android:name="com.ubuntuone.android.files.updown.ACTION_RETRY" />
+				<action android:name="com.ubuntuone.android.files.updown.ACTION_CANCEL_UPLOADS" />
+			</intent-filter>
+		</service>
+			
+		<service
+			android:name=".service.AutoUploadService"
+			android:label="Auto Upload Service"
+			android:exported="false" >
+			
+		    <intent-filter>
+		        <action android:name="com.ubuntuone.android.files.autoupload.ACTION_RESCAN_IMAGES" />
+		    </intent-filter>
+		</service>
+			
+		<provider
+			android:name=".provider.MetaProvider"
+			android:authorities="com.ubuntuone.android.files"
+			android:exported="false" />
+		
+		<provider
+			android:name=".provider.WatchedFoldersProvider"
+			android:authorities="com.ubuntuone.android.files.provider.WatchedFoldersProvider"
+			android:exported="false" />
+		
+		<provider
+		    android:name=".provider.TransfersProvider"
+		    android:authorities="com.ubuntuone.android.files.provider.TransfersProvider"
+		    android:exported="false" />
+		
+		<activity
+			android:name=".AuthProxy"
+			android:configChanges="orientation|keyboardHidden"
+			android:label="UbuntuSSO"
+			android:exported="true">
+		</activity>
+		
+		<!-- Fixed SignInFragment.java:254 java.lang.NullPointerException in 1.2.4 -->
+		<activity
+			android:name=".activity.LoginActivity"
+			android:configChanges="orientation|keyboardHidden"
+			android:windowSoftInputMode="stateHidden"
+			android:label="@string/login_activity_label"
+			android:launchMode="singleTop"
+			android:exported="true" >
+			
+			<intent-filter>
+				<category android:name="android.intent.category.DEFAULT" />
+				<action android:name="com.ubuntuone.android.files.ACTION_SIGN_IN" />
+				<action android:name="com.ubuntuone.android.files.ACTION_SIGN_UP" />
+				<action android:name="com.ubuntuone.android.files.ACTION_VALIDATE" />
+			</intent-filter>
+		</activity>
+		
+		<activity
+			android:name=".activity.TutorialActivity"
+			android:configChanges="orientation|keyboardHidden"
+			android:label="@string/tutorial_activity_label">
+		</activity>
+		
+		<activity
+			android:name=".activity.FilesActivity"
+			android:configChanges="orientation|keyboardHidden"
+			android:label="@string/files_activity_label"
+			android:launchMode="singleTop"
+			android:theme="@style/Theme.Splash" >
+			
+			<intent-filter
+				android:label="@string/app_name" >
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="x-ubuntuone-sso" />
+			</intent-filter>
+			
+			<intent-filter>
+				<action android:name="com.ubuntuone.android.files.ACTION_PICK_AUTO_UPLOAD_DIRECTORY" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+			
+			<intent-filter>
+				<action android:name="android.intent.action.SEND" />
+				<action android:name="android.intent.action.SEND_MULTIPLE" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="image/*" />
+				<data android:mimeType="video/*" />
+				<data android:mimeType="audio/*" />
+				<data android:mimeType="application/*" />
+			</intent-filter>
+		</activity>
+		
+		<activity
+			android:name=".activity.GalleryActivity"
+			android:configChanges="orientation|keyboardHidden"
+			android:label="@string/gallery_activity_label">
+		</activity>
+		
+		<activity
+			android:name=".activity.AutoUploadSetupActivity"
+			android:configChanges="orientation|keyboardHidden"
+			android:label="@string/autoupload_setup_label"
+			android:launchMode="singleTop" >
+		</activity>
+		
+		<activity
+			android:name=".activity.AutoUploadCustomizeActivity"
+			android:configChanges="orientation|keyboardHidden"
+			android:label="@string/autoupload_customize_label"
+			android:launchMode="singleTop" >
+		</activity>
+		
+		<activity
+			android:name=".activity.StoreActivity"
+			android:configChanges="orientation|keyboardHidden"
+			android:label="@string/store_activity_label" >
+		</activity>
+		
+		<activity
+			android:name=".activity.PreferencesActivity"
+			android:configChanges="orientation|keyboardHidden"
+			android:label="@string/preferences_activity_label"
+			android:theme="@style/Theme.U1F" >
+		</activity>
+		
+		<!--
+		<activity
+			android:name=".activity.StorageManagement"
+			android:configChanges="orientation|keyboardHidden"
+			android:label="@string/storage_management_title" >
+		</activity>
+		-->
+		
+		<service
+			android:name=".authenticator.AuthenticationService"
+			android:exported="true" >
+			<intent-filter>
+				<action android:name="android.accounts.AccountAuthenticator" />
+			</intent-filter>
+			<meta-data
+				android:name="android.accounts.AccountAuthenticator"
+				android:resource="@xml/authenticator" />
+		</service>
+		<provider
+			android:name=".provider.FakeProvider"
+			android:authorities="com.ubuntu.android.sso.fake" />
+		<service
+			android:name=".syncadapter.SyncService"
+			android:exported="true" >
+			<intent-filter>
+				<action android:name="android.content.SyncAdapter" />
+			</intent-filter>
+			<meta-data android:name="android.content.SyncAdapter"
+				android:resource="@xml/sync_adapter" />
+		</service>
+		
+	</application>
+	
+</manifest>

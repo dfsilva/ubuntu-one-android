@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:u1f="http://schemas.android.com/apk/res/com.ubuntuone.android.files"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/u1_tiles_fading">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        
+        android:adjustViewBounds="true"
+        
+        android:layout_weight="1"
+        
+        android:gravity="center"
+        
+        android:src="@drawable/slide0" />
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        
+        android:layout_weight="1">
+
+        <com.ubuntuone.android.files.widget.TextViewPlus
+            android:id="@+id/validation_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            
+            android:gravity="left|center_vertical"
+            
+            u1f:customFont="Ubuntu-B.ttf"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_large"
+            android:text="@string/congratulations" />
+
+        <com.ubuntuone.android.files.widget.TextViewPlus
+            android:id="@+id/validation_message"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            
+            android:gravity="left|center_vertical"
+            
+            u1f:customFont="Ubuntu-R.ttf"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_smaller"
+            android:text="@string/check_your_email" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_margin">0dp</dimen>
+    <dimen name="view_margin">2dp</dimen>
+    
+	<dimen name="text_size_small">14sp</dimen>
+	<dimen name="text_size_smaller">16sp</dimen>
+	<dimen name="text_size_medium">18sp</dimen>
+	<dimen name="text_size_large">22sp</dimen>
+	
+	<dimen name="text_size_intro">28sp</dimen>
+	
+	<dimen name="body_copy_05">6dp</dimen>
+	<dimen name="body_copy_1">12dp</dimen>
+	<dimen name="body_copy_15">18dp</dimen>
+	<dimen name="body_copy_2">24dp</dimen>
+	
+	<dimen name="registration_double_padding">12dp</dimen>
+	<dimen name="registration_label_padding">9dp</dimen>
+	<dimen name="registration_field_padding">6dp</dimen>
+</resources>

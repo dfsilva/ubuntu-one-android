@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:u1f="http://schemas.android.com/apk/res/com.ubuntuone.android.files"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/action_bar_background">
+        
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            
+            android:layout_marginLeft="6dp"
+            
+            android:adjustViewBounds="true"
+            
+            android:src="@drawable/u1_logo" />
+        
+    </LinearLayout>
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="true"
+        android:fillViewport="true">
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+            <!-- Intro text -->
+            
+            <com.ubuntuone.android.files.widget.TextViewPlus
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                
+                android:layout_marginTop="@dimen/registration_double_padding"
+                android:layout_marginBottom="@dimen/body_copy_05"
+                android:layout_marginLeft="@dimen/registration_label_padding"
+                
+                android:textColor="@color/text_dark_grey"
+                android:textSize="@dimen/text_size_medium"
+                u1f:customFont="Ubuntu-B.ttf"
+                android:text="@string/sign_up" />
+            
+            <com.ubuntuone.android.files.widget.TextViewPlus
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                
+                android:layout_marginBottom="@dimen/body_copy_1"
+                android:layout_marginLeft="@dimen/registration_label_padding"
+                android:layout_marginRight="@dimen/registration_label_padding"
+                android:layout_marginTop="0dp"
+                
+                android:textColor="@color/text_dark_grey"
+                android:textSize="@dimen/text_size_smaller"
+                u1f:customFont="Ubuntu-R.ttf"
+                android:text="@string/sign_up_desc" />
+            
+            <include layout="@layout/horizontal_separator" />
+            
+            <!-- Full name -->
+            
+            <com.ubuntuone.android.files.widget.TextViewPlus
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                
+                android:layout_marginTop="@dimen/body_copy_05"
+                android:layout_marginBottom="@dimen/body_copy_05"
+                android:layout_marginLeft="@dimen/registration_label_padding"
+                
+                android:textColor="@color/text_dark_grey"
+                android:textSize="@dimen/text_size_smaller"
+                u1f:customFont="Ubuntu-B.ttf"
+                android:text="@string/full_name" />
+            
+            <com.ubuntuone.android.files.widget.EditTextPlus
+                android:id="@+id/sso.fullname"
+                
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="@dimen/registration_label_padding"
+                android:layout_marginBottom="@dimen/body_copy_05"
+                android:layout_marginLeft="@dimen/registration_label_padding"
+                
+                android:inputType="textCapWords"
+                u1f:customFont="Ubuntu-R.ttf" />
+            
+            <include layout="@layout/horizontal_separator" />
+            
+            <!-- Email -->
+            
+            <com.ubuntuone.android.files.widget.TextViewPlus
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                
+                android:layout_marginTop="@dimen/body_copy_05"
+                android:layout_marginBottom="@dimen/body_copy_05"
+                android:layout_marginLeft="@dimen/registration_label_padding"
+                
+                android:textColor="@color/text_dark_grey"
+                android:textSize="@dimen/text_size_smaller"
+                u1f:customFont="Ubuntu-B.ttf"
+                android:text="@string/email" />
+            
+            <include
+                android:id="@+id/email_error"
+                layout="@layout/error_textview" />
+            
+            <com.ubuntuone.android.files.widget.EditTextPlus
+                android:id="@+id/sso.username"
+                
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="@dimen/registration_label_padding"
+                android:layout_marginBottom="@dimen/body_copy_05"
+                android:layout_marginLeft="@dimen/registration_label_padding"
+                
+                android:inputType="textEmailAddress"
+                u1f:customFont="Ubuntu-R.ttf" />
+            
+            <include layout="@layout/horizontal_separator" />
+            
+            <!-- Password -->
+            
+            <com.ubuntuone.android.files.widget.TextViewPlus
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                
+                android:layout_marginTop="@dimen/body_copy_05"
+                android:layout_marginBottom="@dimen/body_copy_05"
+                android:layout_marginLeft="@dimen/registration_label_padding"
+                
+                android:textColor="@color/text_dark_grey"
+                android:textSize="@dimen/text_size_smaller"
+                u1f:customFont="Ubuntu-B.ttf"
+                android:text="@string/password" />
+            
+            <com.ubuntuone.android.files.widget.TextViewPlus
+                android:id="@+id/password_error"
+                
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="@dimen/registration_label_padding"
+                android:layout_marginBottom="@dimen/body_copy_05"
+                android:layout_marginLeft="@dimen/registration_label_padding"
+                
+                android:textColor="@color/text_dark_grey"
+                android:textSize="@dimen/text_size_smaller"
+                u1f:customFont="Ubuntu-R.ttf"
+                android:text="@string/password_desc" />
+            
+            <com.ubuntuone.android.files.widget.EditTextPlus
+                android:id="@+id/sso.password"
+                
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                
+                android:layout_marginRight="@dimen/registration_label_padding"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="@dimen/registration_label_padding"
+                
+                android:inputType="textPassword"
+                u1f:customFont="Ubuntu-R.ttf" />
+            
+            <!-- Because of provided png, we need a larger left margin. -->
+            <com.ubuntuone.android.files.widget.CheckBoxPlus
+                android:id="@+id/password_toggle"
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                android:paddingLeft="24dp"
+                
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="@dimen/registration_label_padding"
+                android:layout_marginBottom="@dimen/body_copy_05"
+                android:layout_marginLeft="@dimen/registration_label_padding"
+                
+                android:textColor="@color/text_dark_grey"
+                android:textSize="@dimen/text_size_smaller"
+                u1f:customFont="Ubuntu-R.ttf"
+                android:text="@string/show_password"
+                
+                android:button="@drawable/checkbox"
+                
+                android:checked="false" />
+            
+            <include layout="@layout/horizontal_separator" />
+            
+            <!-- Captcha -->
+            
+            <LinearLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                
+                android:layout_marginTop="@dimen/body_copy_05"
+                android:layout_marginBottom="@dimen/body_copy_05">
+                
+                <com.ubuntuone.android.files.widget.TextViewPlus
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:layout_marginLeft="@dimen/registration_label_padding"
+                    
+                    android:textColor="@color/text_dark_grey"
+                    android:textSize="@dimen/text_size_smaller"
+                    u1f:customFont="Ubuntu-B.ttf"
+                    android:text="@string/security" />
+                
+                <com.ubuntuone.android.files.widget.TextViewPlus
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    
+                    android:gravity="center_horizontal"
+                    
+                    android:textColor="@color/text_dark_grey"
+                    android:textSize="@dimen/text_size_smaller"
+                    u1f:customFont="Ubuntu-R.ttf"
+                    android:text="@string/captcha_unreadable" />
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/sso.captcha_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                
+                android:layout_gravity="center_horizontal">
+                
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    style="?android:attr/progressBarStyleSmall" />
+                    
+                <com.ubuntuone.android.files.widget.TextViewPlus
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:layout_marginLeft="6dp"
+                    
+                    android:textSize="@dimen/text_size_smaller"
+                    android:textColor="@color/text_grey"
+                    u1f:customFont="Ubuntu-R.ttf"
+                    android:text="@string/loading_captcha" />
+                
+            </LinearLayout>
+            
+            <com.ubuntuone.android.files.widget.ButtonPlus
+                android:id="@+id/sso.captcha_failed"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="4dp"
+                
+                android:textSize="@dimen/text_size_smaller"
+                android:textColor="@color/text_grey"
+                u1f:customFont="Ubuntu-R.ttf"
+                android:text="@string/loading_captcha_failed" />
+            
+            <LinearLayout
+                android:id="@+id/sso.captcha_ready"
+                
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                
+                android:gravity="center_horizontal"
+                
+                android:layout_marginBottom="@dimen/body_copy_05">
+                    
+                <greendroid.widget.AsyncImageView
+                    android:id="@+id/sso.captcha_image"
+                    
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:layout_marginBottom="@dimen/body_copy_05"
+                    android:padding="1dp"
+                    android:background="@color/captcha_border" />
+                
+                <com.ubuntuone.android.files.widget.TextViewPlus
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    
+                    android:layout_marginTop="@dimen/body_copy_05"
+                    android:layout_marginRight="@dimen/registration_label_padding"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="@dimen/registration_label_padding"
+                    
+                    android:textColor="@color/text_dark_grey"
+                    android:textSize="@dimen/text_size_smaller"
+                    u1f:customFont="Ubuntu-R.ttf"
+                    android:text="@string/captcha_solution" />
+                
+                <include
+                    android:id="@+id/captcha_error"
+                    layout="@layout/error_textview" />
+                
+                <com.ubuntuone.android.files.widget.EditTextPlus
+                    android:id="@+id/sso.captcha"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="@dimen/registration_label_padding"
+                    android:layout_marginLeft="@dimen/registration_label_padding"
+                    
+                    android:inputType="textNoSuggestions"
+                    u1f:customFont="Ubuntu-R.ttf" />
+                
+            </LinearLayout>
+            
+            <include layout="@layout/horizontal_separator" />
+            
+            <com.ubuntuone.android.files.widget.TextViewPlus
+                android:id="@+id/signup_footer_tos"
+                
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                
+                android:layout_marginTop="@dimen/body_copy_15"
+                android:layout_marginRight="@dimen/registration_label_padding"
+                android:layout_marginBottom="@dimen/body_copy_2"
+                android:layout_marginLeft="@dimen/registration_label_padding"
+                
+                android:textColor="@color/text_grey"
+                android:textSize="@dimen/text_size_smaller"
+                u1f:customFont="Ubuntu-R.ttf"
+                android:text="@string/signup_footer_tos" />
+            
+            <com.ubuntuone.android.files.widget.ButtonPlus
+                android:id="@+id/sso_signup"
+                
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="22dp"
+                android:layout_marginLeft="20dp"
+                
+                android:minHeight="46dp"
+                
+                android:background="@drawable/button_orange"
+                
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_medium"
+                u1f:customFont="Ubuntu-B.ttf"
+                android:text="@string/sign_up" />
+            
+        </LinearLayout>
+    
+    </ScrollView>
+    
+</LinearLayout>

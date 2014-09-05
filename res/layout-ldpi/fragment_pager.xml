@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- If you change this layout, consider changing fragment_pager for other densities. -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/u1_tiles_fading">
+	
+	<android.support.v4.view.ViewPager
+	 	android:id="@+id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+	
+	<greendroid.widget.PageIndicator
+			android:id="@+id/indicator"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			
+			android:gravity="center_horizontal"
+			
+			android:layout_marginBottom="10dp" />
+	
+    <Button
+		android:id="@+id/sign_up_now"
+		
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		
+		android:layout_marginTop="6dp"
+		android:layout_marginRight="20dp"
+		android:layout_marginBottom="12dp"
+		android:layout_marginLeft="20dp"
+		
+		android:minHeight="46dp"
+		
+		android:background="@drawable/button_grey"
+		
+		android:textColor="@color/text_dark_grey"
+		android:textSize="@dimen/text_size_medium"
+		android:text="@string/sign_up_now" />
+    
+</LinearLayout>

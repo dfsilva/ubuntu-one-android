@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<item type="id" name="action_bar_progress" />
+	<item type="id" name="action_bar_refresh" />
+	<item type="id" name="action_bar_upload" />
+	
+	<item type="id" name="stat_ongoing_upload_id" />
+	<item type="id" name="stat_ongoing_download_id" />
+	<item type="id" name="stat_completed_upload_id" />
+	<item type="id" name="stat_completed_download_id" />
+	<item type="id" name="stat_failed_upload_id" />
+	<item type="id" name="stat_failed_download_id" />
+	<item type="id" name="stat_roaming_autoupload_off_id" />
+	<item type="id" name="stat_quota_exceeded_id" />
+	<item type="id" name="stat_please_reauthenticate" />
+	
+	<item type="id" name="context_download" />
+	<item type="id" name="context_cancel_download" />
+	<item type="id" name="context_create_link" />
+	<item type="id" name="context_share_link" />
+	<item type="id" name="context_disable_link" />
+	<item type="id" name="context_rename" />
+	<item type="id" name="context_delete" />
+	<item type="id" name="context_delete_from_device" />
+	
+	<item type="id" name="icon" />
+	<item type="id" name="title" />
+	<item type="id" name="detail" />
+	<item type="id" name="size" />
+	
+	<item type="id" name="gallery_holder_key" />
+	<item type="id" name="gallery_remote_key" />
+</resources>

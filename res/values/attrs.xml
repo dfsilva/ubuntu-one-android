@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="customFont" format="string" />
+    <declare-styleable name="TextViewPlus">
+        <attr name="customFont" />
+    </declare-styleable>
+    <declare-styleable name="EditTextPlus">
+        <attr name="customFont" />
+    </declare-styleable>
+    <declare-styleable name="ButtonPlus">
+        <attr name="customFont" />
+    </declare-styleable>
+    <declare-styleable name="CheckBoxPlus">
+        <attr name="customFont" />
+    </declare-styleable>
+</resources>

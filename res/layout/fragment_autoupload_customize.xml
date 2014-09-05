@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:u1f="http://schemas.android.com/apk/res/com.ubuntuone.android.files"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@android:color/white" >
+	
+    <com.ubuntuone.android.files.widget.TextViewPlus
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:layout_marginLeft="8dp"
+			android:layout_marginBottom="8dp"
+			
+			android:textColor="@android:color/primary_text_light"
+			android:textSize="@dimen/text_size_medium"
+			u1f:customFont="Ubuntu-B.ttf"
+			android:text="@string/autoupload_select_folders" />
+    
+	<ListView
+		android:id="@+id/folder_list"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" />
+	
+	<ProgressBar
+		android:id="@+id/folder_list_empty"
+		style="@android:style/Widget.ProgressBar.Small.Inverse"
+		
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		
+		android:layout_gravity="center"
+		
+		android:indeterminate="true"
+		android:visibility="gone" />
+	
+</LinearLayout>

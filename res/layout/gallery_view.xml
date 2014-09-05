@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:u1f="http://schemas.android.com/apk/res/com.ubuntuone.android.files"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black" >
+
+    <LinearLayout
+        android:id="@+id/progress_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/progress_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/u1_logo" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="240dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:indeterminate="true"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@android:drawable/progress_indeterminate_horizontal"
+            android:progressDrawable="@drawable/progress_horizontal"
+            android:max="100"
+            android:minWidth="240dp"
+            android:visibility="gone" />
+        
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            
+        <com.ubuntuone.android.files.widget.TextViewPlus
+            android:id="@+id/error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/secondary_text_dark"
+            android:textSize="@dimen/text_size_small"
+            u1f:customFont="Ubuntu-B.ttf" />
+        </ScrollView>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/preview_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter" />
+
+</FrameLayout>

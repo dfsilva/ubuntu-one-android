@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:u1f="http://schemas.android.com/apk/res/com.ubuntuone.android.files"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/content_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_margin="0dip"
+        android:layout_weight="1"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:orientation="vertical" >
+
+            <com.ubuntuone.android.files.widget.TextViewPlus
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/autoupload_description_line1"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="@dimen/text_size_medium"
+                u1f:customFont="Ubuntu-B.ttf" />
+
+            <com.ubuntuone.android.files.widget.TextViewPlus
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/autoupload_description_line2"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="@dimen/text_size_small"
+                u1f:customFont="Ubuntu-R.ttf" />
+
+            <RadioGroup
+                android:id="@+id/auto_upload_mode"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp" >
+
+                <RadioButton
+                    android:id="@+id/auto_upload_on_both"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/network_wifi_or_mobile"
+                    android:textColor="@android:color/primary_text_light" />
+
+                <RadioButton
+                    android:id="@+id/auto_upload_on_wifi"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/network_wifi_only"
+                    android:textColor="@android:color/primary_text_light" />
+            </RadioGroup>
+
+            <com.ubuntuone.android.files.widget.TextViewPlus
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/autoupload_settings_notice"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="@dimen/text_size_small"
+                u1f:customFont="Ubuntu-R.ttf" />
+
+            <com.ubuntuone.android.files.widget.TextViewPlus
+                android:id="@+id/auto_upload_mobile_notice"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/autoupload_mobile_network_notice"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="@dimen/text_size_small"
+                android:visibility="invisible"
+                u1f:customFont="Ubuntu-R.ttf" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_vertical"
+        android:layout_margin="5dp"
+        android:orientation="horizontal" >
+
+        <com.ubuntuone.android.files.widget.ButtonPlus
+            android:id="@+id/button_skip_auto_upload"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="46dp"
+            android:padding="3sp"
+            android:text="@string/autoupload_skip"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="@dimen/text_size_medium"
+            u1f:customFont="Ubuntu-B.ttf" />
+
+        <com.ubuntuone.android.files.widget.ButtonPlus
+            android:id="@+id/button_enable_auto_upload"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="46dp"
+            android:padding="3sp"
+            android:text="@string/autoupload_enable"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="@dimen/text_size_medium"
+            u1f:customFont="Ubuntu-B.ttf" />
+    </LinearLayout>
+
+</LinearLayout>

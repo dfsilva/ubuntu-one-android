@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:fillViewport="true">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" >
+		
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:minHeight="20dip"
+			android:gravity="center"
+			android:background="@color/sso.orange"
+			android:textSize="@dimen/text_size_medium"
+			android:textStyle="bold"
+			android:textColor="@android:color/white"
+			android:text="@string/authproxy.authorize_access" />
+		
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="10dip"
+			android:gravity="left"
+			android:textSize="@dimen/text_size_medium"
+			android:text="@string/authproxy.description" />
+		
+		<TextView
+			android:id="@+id/app_name"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="10dip"
+			android:minHeight="40dip"
+			android:gravity="left|center_vertical"
+			android:textSize="@dimen/text_size_medium"
+			android:textStyle="bold"
+			android:hint="@string/undefined" />
+		
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="10dip"
+			android:gravity="left"
+			android:textSize="@dimen/text_size_small"
+			android:text="@string/authproxy.learn_more" />
+		
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:layout_margin="10dip"
+			android:gravity="left"
+			android:textSize="@dimen/text_size_small"
+			android:textStyle="bold"
+			android:text="@string/authproxy.question" />
+		
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:weightSum="5" >
+			<Button
+				android:id="@+id/accept_button"
+				android:layout_width="wrap_content"
+				android:layout_height="fill_parent"
+				android:layout_weight="2"
+				android:textColor="@color/sso.orange"
+				android:textStyle="bold"
+				android:text="@string/authproxy.allow" />
+			<Button
+				android:id="@+id/deny_button"
+				android:layout_width="wrap_content"
+				android:layout_height="fill_parent"
+				android:layout_weight="3"
+				android:textStyle="bold"
+				android:text="@string/authproxy.deny" />
+		</LinearLayout>
+
+	</LinearLayout>
+</ScrollView>

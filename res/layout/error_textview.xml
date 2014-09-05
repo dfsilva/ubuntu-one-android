@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubuntuone.android.files.widget.TextViewPlus
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:u1f="http://schemas.android.com/apk/res/com.ubuntuone.android.files"
+    
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    
+    android:layout_marginLeft="@dimen/registration_label_padding"
+    android:layout_marginRight="@dimen/registration_label_padding"
+    
+    android:textColor="@color/error"
+    android:textSize="@dimen/text_size_smaller"
+    u1f:customFont="Ubuntu-R.ttf"
+    
+    android:visibility="gone" />

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/preferences_activity_label" >
+
+    <PreferenceCategory
+        android:key="account"
+        android:title="@string/category_account" >
+        <Preference
+            android:enabled="false"
+            android:key="username"
+            android:persistent="true"
+            android:title="@string/username" />
+        <Preference
+            android:enabled="false"
+            android:key="plan"
+            android:persistent="true"
+            android:title="@string/current_plan" />
+        <Preference
+            android:key="invite_friend"
+            android:summary="@string/invite_friend_summary"
+            android:title="@string/invite_friend" />
+        <Preference
+            android:key="purchase_storage"
+            android:summary="@string/upgrade_storage_summary"
+            android:title="@string/upgrade_storage" />
+        <Preference
+            android:key="sign_out"
+            android:summary="@string/sign_out_summary"
+            android:title="@string/sign_out" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="uploads"
+        android:title="@string/category_uploads" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="auto_retry_failed"
+            android:persistent="true"
+            android:title="@string/auto_retry_failed" />
+
+        <Preference
+            android:enabled="false"
+            android:key="retry_failed"
+            android:summary="@string/no_pending_uploads"
+            android:title="@string/retry_failed_uploads_now" />
+        <Preference
+            android:key="cancel_all_uploads"
+            android:title="@string/cancel_all" />
+        <Preference
+            android:enabled="false"
+            android:key="cancel_failed"
+            android:title="@string/cancel_failed" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="photo_auto_upload"
+        android:title="@string/category_photo_auto_upload" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="upload_photos"
+            android:persistent="true"
+            android:title="@string/auto_upload_photos" />
+
+        <Preference
+            android:dependency="upload_photos"
+            android:key="upload_photos_now"
+            android:title="@string/upload_all_photos_now" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="use_wifi_only"
+            android:persistent="true"
+            android:title="@string/only_on_wifi" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="only_when_charging"
+            android:persistent="true"
+            android:title="@string/only_when_charging" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="also_when_roaming"
+            android:persistent="true"
+            android:summary="Roaming uploads may cost you money."
+            android:title="@string/also_when_roaming" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="show_auto_upload_notifications"
+            android:persistent="true"
+            android:title="@string/show_notifications" />
+
+        <Preference
+            android:key="upload_photos_dir"
+            android:persistent="true"
+            android:title="@string/upload_photos_to" />
+        <Preference
+            android:key="upload_photos_src"
+            android:title="@string/select_folders_to_upload" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="manage"
+        android:title="@string/category_manage" >
+        <Preference
+            android:key="clear_cache"
+            android:summary="@string/clear_cache_summary"
+            android:title="@string/clear_cache" />
+        <Preference
+            android:key="visit_online"
+            android:title="@string/visit_account_online" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="support"
+        android:title="@string/category_support" >
+        <Preference
+            android:key="feedback"
+            android:title="@string/send_feedback" />
+
+        <PreferenceScreen
+            android:enabled="true"
+            android:key="report_problem"
+            android:title="@string/report_problem" >
+            <CheckBoxPreference
+                android:key="collect_logs"
+                android:summary="@string/collect_logs_summary"
+                android:title="@string/collect_logs" />
+
+            <Preference
+                android:dependency="collect_logs"
+                android:key="review_logs"
+                android:summary="@string/review_logs_summary"
+                android:title="@string/review_logs" />
+            <Preference
+                android:dependency="collect_logs"
+                android:key="send_logs"
+                android:summary="@string/send_logs_summary"
+                android:title="@string/send_logs" />
+        </PreferenceScreen>
+
+        <Preference
+            android:key="faq"
+            android:title="@string/faq" />
+        <Preference
+            android:key="upgrade_plan"
+            android:summary="@string/tell_me_more_summary"
+            android:title="@string/tell_me_more" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="About"
+        android:title="@string/category_about" >
+        <Preference
+            android:key="version"
+            android:title="@string/version" />
+        <Preference
+            android:key="changelog"
+            android:title="@string/recent_changes" />
+        <Preference
+            android:key="website"
+            android:title="@string/project_website" />
+        <Preference
+            android:key="license"
+            android:summary="@string/license_summary"
+            android:title="@string/license" />
+        <Preference
+            android:key="greendroid"
+            android:summary="Open source library we used"
+            android:title="GreenDroid" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

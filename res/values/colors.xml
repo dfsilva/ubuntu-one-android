@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="transparent">@android:color/transparent</color>
+	
+	<color name="text_dark_grey">#333333</color>
+	<color name="text_light_grey">#ffbbbbbb</color>
+	<color name="text_grey">#ffaea79f</color>
+	<color name="text_blue">#ff1157fe</color>
+	<color name="text_red">#ffdd4814</color>
+	
+	<color name="soft_orange">#aafcece7</color>
+	
+	<color name="error">@color/text_red</color>
+	<color name="web_url">#ffdd4814</color>
+	
+	<color name="horizontal_separator_grey">#ffdfdfdf</color>
+	<color name="captcha_border">#ffd6d3cf</color>
+	
+	<color name="list_item_bg_remote">#ccefefef</color>
+	<color name="list_item_bg_local">@color/transparent</color>
+	
+	<color name="list_selector_bg_start">#ffffcc33</color>
+	<color name="list_selector_bg_end">#ffff9900</color>
+	
+	<color name="sso.orange">#ffdd4814</color>
+	<color name="sso.orange_light">#aadd4814</color>
+	
+	<color name="header_grey">#ffdddddd</color>
+</resources>

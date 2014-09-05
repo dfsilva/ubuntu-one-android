@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="Theme.U1F" parent="@style/Theme.GreenDroid.Light">
+		<item name="gdActionBarTitleColor">@android:color/white</item>
+		<item name="gdActionBarBackground">@drawable/action_bar_background</item>
+		<item name="gdActionBarDividerDrawable">@drawable/action_bar_divider</item>
+		<item name="gdActionBarDividerWidth">2px</item>
+		<item name="gdActionBarApplicationDrawable">@drawable/launcher</item>
+		<item name="android:listViewStyle">@style/U1ListView</item>
+	</style>
+	
+	<style name="Theme.U1F.WindowNoTitle">
+	    <item name="android:windowContentOverlay">@null</item>
+	    <item name="android:windowNoTitle">true</item>
+	</style>
+	
+	<style name="Theme.Splash" parent="@style/Theme.U1F.WindowNoTitle">
+		<item name="android:windowBackground">@drawable/u1_tiles_fading</item>	
+	</style>
+	
+	<style name="Theme.Transparent" parent="android:Theme">
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowBackground">@color/transparent</item>
+		<item name="android:windowContentOverlay">@null</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+	
+	<style name="TextAppearance.StatusBar">
+		<item name="android:textColor">@android:color/primary_text_light</item>
+	</style>
+	
+	<style name="TextAppearance.StatusBar.NotificationTitle">
+		<item name="android:textSize">@dimen/text_size_medium</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	
+	<style name="TextAppearance.StatusBar.NotificationSubtitle">
+		<item name="android:textSize">@dimen/text_size_small</item>
+	</style>
+	
+	<style name="U1ListView" parent="@android:style/Widget.ListView.White">
+	    <item name="android:listSelector">@drawable/list_selector_background</item>
+	</style>
+
+</resources>

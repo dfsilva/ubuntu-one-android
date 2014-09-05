@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<account-authenticator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accountType="com.ubuntu"
+    android:icon="@drawable/sso_logo_small"
+    android:smallIcon="@drawable/sso_logo_small"
+    android:label="@string/ubuntuone"
+/>

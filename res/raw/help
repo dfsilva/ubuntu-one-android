@@ -1,0 +1,44 @@
+<small><b>Basics of Ubuntu One File Sync</b>
+
+<u>Browse</u>
+
+Touch any folder to browse it. Press <i>back button</i> to go directory up. If you visit a directory, it will be marked as <i>cached</i> and available to browse off-line.
+
+<u>Download files</u>
+
+Touch a file to download it. When ready, touch again to open it. You will see approximate time when the file was last downloaded. You can download more then one file simultaneously. Thanks to background service, your downloads will not be interrupted if you leave the app or receive a phone call during file transfers.
+
+<u>Upload files</u>
+
+To upload a file, navigate to <i>Menu > Upload</i>. After picking a file, the upload will start. When ready, you will see a short notification and your file will appear on the files list. However, you will download that file if you touch it - you won't have to download an uploaded file to share its public link (TBD).
+
+
+<b>Support</b>
+
+<u>Ubuntu One File Sync support</u>
+
+For Ubuntu One File Sync support, visit the project page at <i>http://answers.launchpad.com/ubuntuone-android-files</i> or jump into <i>irc.freenode.net #ubuntuone</i>
+
+<u>Ubuntu One support</u>
+
+For Ubuntu One related support, visit <i>Menu &gt; Settings &gt; Ubuntu One Support</i>.
+
+
+<b>About the service</b>
+
+Ubuntu One File Sync gives you access to Ubuntu One cloud storage. Since Ubuntu One is all about sync (that feature is work in progress), Ubuntu One File Sync is supported by a background service. Its job is to complete your file transfers and perform any necessary sync (WIP). If you do not want to leave that service in background, make sure to shut it down by closing application with <i>Menu > Stop sync</i>. However, you may interrupt your transfers.
+
+
+<b>Troubleshooting</b>
+
+If anything goes wrong, <i>Menu > Stop sync</i> and try again. If the problem continues, you may consider sending your logs that will help to solve it from <i>Menu > Settings > Send logs</i>. You can also report that on our IRC channel.
+
+
+<b>Final words</b>
+
+I hope you'll enjoy using Ubuntu One File Sync. It's still under development and there are many great features to come!
+
+You can mail me from <i>Menu &gt; Settings &gt; About</i> or join us to share comments and ideas on <i>irc.freenode.net #ubuntuone</i>.
+
+Project page:
+http://wiki.ubuntu.com/AndroidU1</small>
